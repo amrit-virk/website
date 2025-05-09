@@ -4,74 +4,156 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Amrit Virk</title>
-  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="index-page">
 
-  <header>
-    <h1>Amrit Virk</h1>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Oura-style transparent navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <a href="index.html">Amrit Virk</a>
+      </div>
+      <nav class="nav-links">
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero/Profile section with face image -->
-  <section class="hero">
-    <img src="test.png" alt="Amrit Virk" class="profile-img" />
-    <h2>Build. Learn. Repeat.</h2>
-    <p>Hi, I’m Amrit — an aspiring engineer blending creativity with technical design.</p>
+  <div class="landing-hero">
+    <img src="images/amrit-face.jpg" alt="Amrit Virk" class="landing-profile"/>
+    <h1>Hi, I’m Amrit Virk.</h1>
+    <p>Engineer. Builder. Creator. Turning ideas into reality.</p>
+
+    <div class="cta-buttons">
+      <a href="projects.html" class="cta">View Projects</a>
+      <a href="skills.html" class="cta">Skills</a>
+      <a href="resume.html" class="cta">Resume</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </div>
+  </div>
+
+  <!-- Scrollable content -->
+  <section class="content-block">
+    <h2>About Me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at metus nec urna egestas tincidunt.</p>
   </section>
 
-  <!-- Project Gallery Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="test.png" alt="Smart Scanner" />
-        <h3>Smart Scanner</h3>
-        <p>A lidar-based system that maps 3D environments using custom hardware.</p>
+  <section class="content-block">
+    <h2>What I Do</h2>
+    <p>Duis feugiat suscipit elit, at pharetra nunc bibendum nec. Curabitur blandit velit in luctus cursus.</p>
+  </section>
+
+  <section class="content-block">
+    <h2>What I'm Working on Currently</h2>
+    <p>Vestibulum vehicula orci in efficitur ultrices. Nulla facilisi. Integer facilisis sem ac sapien luctus.</p>
+  </section>
+
+  <section class="content-block">
+    <h2>My Projects</h2>
+    <p>Vestibulum vehicula orci in efficitur ultrices. Nulla facilisi. Integer facilisis sem ac sapien luctus.</p>
+  </section>
+
+  <!-- Sliding Photo Carousel Section -->
+  <section class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <a href="projects.html">
+          <img src="images/slide1.jpg" alt="Projects" />
+        </a>
       </div>
-      <div class="project-card">
-        <img src="test.png" alt="Spotify Visualizer" />
-        <h3>Spotify Visualizer</h3>
-        <p>Wrapped-style web app displaying your music stats in real time.</p>
+      <div class="carousel-slide">
+        <a href="skills.html">
+          <img src="images/slide2.jpg" alt="Skills" />
+        </a>
       </div>
-      <div class="project-card">
-        <img src="test.png" alt="Hospital Dashboard" />
-        <h3>Health Dashboard</h3>
-        <p>Dashboard for tracking patient metrics using real clinical data.</p>
+      <div class="carousel-slide">
+        <a href="resume.html">
+          <img src="images/slide3.jpg" alt="Resume" />
+        </a>
       </div>
     </div>
-  </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python, C, Java, HTML/CSS, JavaScript</li>
-      <li><strong>Frameworks:</strong> React (Beginner), Flask</li>
-      <li><strong>Tools:</strong> Git, MATLAB, Arduino, Inventor, VS Code</li>
-    </ul>
-  </section>
+    <div class="carousel-indicators">
+      <button class="indicator active"></button>
+      <button class="indicator"></button>
+      <button class="indicator"></button>
+    </div>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <p><a href="AmritVirk_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:amritvirk073@gmail.com">amritvirk073@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <button class="carousel-button prev">&#10094;</button>
+    <button class="carousel-button next">&#10095;</button>
   </section>
 
   <footer>
-    &copy; 2025 Amrit Virk. Sleek. Smart. Simple.
+    &copy; 2025 Amrit Virk. Designed with style and purpose.
   </footer>
+
+  <!-- Carousel Script -->
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel-button.next');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlide = 0;
+
+    function updateSlidePosition() {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = 'translateX(-' + (slideWidth * currentSlide) + 'px)';
+      indicators.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    nextButton.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlidePosition();
+    });
+
+    prevButton.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlidePosition();
+    });
+
+    indicators.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateSlidePosition();
+      });
+    });
+
+    window.addEventListener('resize', updateSlidePosition);
+    window.addEventListener('load', updateSlidePosition);
+  </script>
+
+  <!-- Scroll behaviors -->
+  <script>
+    const hero = document.querySelector('.landing-hero');
+    const body = document.querySelector('body');
+    const navbar = document.querySelector('.navbar');
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        body.classList.toggle("alt-bg", !entry.isIntersecting);
+      },
+      { threshold: 1.0 }
+    );
+
+    if (hero && body.classList.contains('index-page')) {
+      observer.observe(hero);
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 
 </body>
 </html>
