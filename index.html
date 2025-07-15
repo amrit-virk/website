@@ -1,174 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amrit Virk</title>
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    html {
+      scrollbar-color: #a3a3a3 transparent;
+      scrollbar-width: thin;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #a3a3a3;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+    
+
+    
+    p {
+    font-size: 1.1rem;
+    color: #4b3a32;
+    line-height: 1.625;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #cc5b3e;
+    font-weight: 600;
+    line-height: 1.375;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.875rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+</style>
 </head>
 
-<script src="navbar.js"></script>
-
-<body class="index-page">
-
-  <!-- Oura-style transparent navbar -->
-  <header class="navbar">
-    <div class="navbar-container">
-      <div class="logo">
+<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth">
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
+    <div class="flex w-full items-center justify-between px-6 py-4">
+      <div class="text-2xl font-bold text-black tracking-tight">
         <a href="index.html">Amrit Virk</a>
       </div>
-      <nav class="nav-links">
-        <a href="projects.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <nav class="flex space-x-8 text-[#4b3a32] font-medium">
+        <a href="Projects/projects.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
+        <a href="resume.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
+        <a href="about.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
+        <a href="contact.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
       </nav>
     </div>
   </header>
 
-  <div class="landing-hero">
-    <img src="Headshot.JPG" alt="Amrit Virk" class="landing-profile"/>
-    <h1>Hi, I’m Amrit Virk.</h1>
-    <p>Engineer. Builder. Creator. Turning ideas into reality.</p>
-
-    <div class="cta-buttons">
-      <a href="projects.html" class="cta">View Projects</a>
-      <a href="resume.html" class="cta">Resume</a>
-      <a href="contact.html" class="cta">Contact</a>
+  <!-- Hero Splash -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-50">
+    <img src="Images/Headshot.JPG" alt="Amrit Virk" class="w-48 h-48 rounded-full shadow-lg object-cover border-4 border-[#d9c4b1] sm:w-56 sm:h-56 mb-6" />
+    <h1 class="text-5xl font-bold text-[#010001] ">Hi, I’m Amrit Virk.</h1>
+    <p class="mt-2 text-xl text-[#874000] pt-3">Engineer. Builder. Creator. Turning ideas into reality.</p>
+    <div class="flex flex-wrap justify-center gap-3 mt-5">
+      <a href="Projects/projects.html" class="bg-[#874000] text-white text-base px-4 py-2 rounded hover:bg-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">View Projects</a>
+      <a href="resume.html" class="bg-[#874000] text-white text-base px-4 py-2 rounded hover:bg-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
+      <a href="contact.html" class="bg-[#874000] text-white text-base px-4 py-2 rounded hover:bg-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
     </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="bg-[#d9c4b1] w-full fade-on-scroll bg-[#d9c4b1] w-full opacity-0 translate-y-4 transition-all duration-1000">
+    <main class="px-6 space-y-10 pt-5 pb-24 mx-40">
+      <div class="grid grid-cols-2 sm:grid-cols-2 gap-x-10 gap-y-2 text-base text-[#4b3a32] leading-relaxed">
+        <section class="text-base text-[#4b3a32] leading-relaxed">
+          <h2 class="text-2xl font-semibold text-[#cc5b3e] mb-4">About Me</h2>
+          <p>I'm a second-year Electrical Engineering student at McMaster University with a strong interest in embedded systems, automation, and circuit design. I enjoy building efficient, hands-on solutions that bridge hardware and software. My approach combines technical depth with practical application, and I’m always looking to expand my skills through challenging projects and continuous learning.
+            <br><br>Outside of engineering, I love using my free time to work on myself and refine who I am as a person. I have a strong passion for sports, video games, and music, often catching myself doing a combination of the three, whether that’s listening to music while shooting hoops or gaming with friends to unwind. I also love spending time outside, whether it’s going for walks, exploring new places, or just getting some fresh air to reset. Fitness plays a big role in my routine, and I spend time in the gym focusing on weight training and personal discipline. I'm a tech enthusiast at heart — always exploring new tools, AI applications, or building side projects to automate everyday tasks. I value clean design, continuous growth, and staying curious in everything I do.</p>
+        </section>
+
+        <section class="text-base text-[#4b3a32] leading-relaxed">
+          <h2 class="text-2xl font-semibold text-[#cc5b3e] mb-4">What I Do</h2>
+          <p>Embedded Systems & Microcontrollers</p>
+          <p>Circuit Design & Simulation</p>
+          <p>Automation & Scripting</p>
+          <p>3D Modeling & CAD</p>
+          <p>System Integration & Problem Solving</p>
+          <p>Data Visualization & Analysis</p>
+          <p>Web Development & UI Design</p>
+          <p>& More</p>
+        </section>
+      </div>
+
+      <section class="text-base text-[#4b3a32] leading-relaxed">
+        <h2 class="text-2xl font-semibold text-[#cc5b3e] mb-4">What I'm Working on Currently</h2>
+        <p>I'm currently employed as an engineering intern at Metex Heat Treating for the summer 2025 term. My day to day tasks involve creating engineering drawings for parts, furnaces, and other systems. Outside of work, I'm currenly in the process of getting certified for both Amazon Web Services and Google Cloud Platform. I'm also looking to start working on a few personal projects which will help me further refines my skills.</p>
+      </section>
+
+      <section id="projects" class="body-text">
+  <h2 class="text-2xl font-semibold text-[#cc5b3e] mb-4">My Projects</h2>
+  <p class="mb-4">Find some of my recent projects below.</p>
+
+  <div class="swiper mySwiper w-full">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide flex justify-center px-4">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md max-w-sm">
+          <img src="Images/slide1.jpg" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[#874000] mb-2">Project Title 1</h3>
+            <p>Short description of the project and tools used.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide flex justify-center px-4">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md max-w-sm">
+          <img src="Images/slide2.jpg" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[#874000] mb-2">Project Title 2</h3>
+            <p>Short description of the project and tools used.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper navigation and pagination -->
+    <div class="swiper-button-next text-[#874000]"></div>
+    <div class="swiper-button-prev text-[#874000]"></div>
+    <div class="swiper-pagination mt-4"></div>
+  </div>
+</section>
+
+    </main>
   </div>
 
-  <!-- Scrollable content -->
-  <section class="content-block">
-    <h2>About Me</h2>
-    <p>I'm a second-year Electrical Engineering student at McMaster University with a strong interest in embedded systems, automation, and circuit design. I enjoy building efficient, hands-on solutions that bridge hardware and software. 
-      My approach combines technical depth with practical application, and I’m always looking to expand my skills through challenging projects and continuous learning.</p>
-    <p>Outside of engineering, I love using my free time to work on myself and refine who I am as a person. I have a strong passion for sports, video games, and music, often catching myself doing a combination of the three, whether that’s listening to music while shooting hoops or gaming with friends to unwind. 
-      I also love spending time outside, whether it’s going for walks, exploring new places, or just getting some fresh air to reset. Fitness plays a big role in my routine, and I spend time in the gym focusing on weight training and personal discipline. I'm a tech enthusiast at heart — always exploring new tools, AI applications, or building side projects to automate everyday tasks. I value clean design, continuous growth, and staying curious in everything I do.</p>
+  <footer class="text-center text-sm text-gray-600 mt-12 mb-6">&copy; 2025 Amrit Virk. Designed with style and purpose.</footer>
 
-  </section>
-
-  <section class="content-block">
-    <h2>What I Do</h2>
-    <p>Embedded Systems & Microcontrollers</p>
-    <p>Circuit Design & Simulation</p>
-    <p>Automation & Scripting</p>
-    <p>3D Modeling & CAD</p>
-    <p>System Integration & Problem Solving</p>
-    <p>Data Visualization & Analysis</p>
-    <p>Web Development & UI Design</p>
-    <p>& More</p>
-  </section>
-
-  <section class="content-block">
-    <h2>What I'm Working on Currently</h2>
-    <p>I'm currently employed as an engineering intern at Metex Heat Treating for the summer 2025 term. My day to day tasks involve creating engineering drawings for parts, furnaces, and other systems. Outside of work, I'm currenly in the process of getting certified for both Amazon Web Services and Google Cloud Platform.
-      I'm also looking to start working on a few personal projects which will help me further refines my skills. 
-    </p>
-  </section>
-
-  <section class="content-block">
-    <h2>My Projects</h2>
-    <p>Find some of my recent projects below.</p>
-  </section>
-
-  <!-- Sliding Photo Carousel Section -->
-  <section class="carousel">
-    <div class="carousel-track">
-      <div class="carousel-slide">
-        <a href="projects.html">
-          <img src="images/slide1.jpg" alt="Projects" />
-        </a>
-      </div>
-      <div class="carousel-slide">
-        <a href="skills.html">
-          <img src="images/slide2.jpg" alt="Skills" />
-        </a>
-      </div>
-      <div class="carousel-slide">
-        <a href="resume.html">
-          <img src="images/slide3.jpg" alt="Resume" />
-        </a>
-      </div>
-    </div>
-
-    <div class="carousel-indicators">
-      <button class="indicator active"></button>
-      <button class="indicator"></button>
-      <button class="indicator"></button>
-    </div>
-
-    <button class="carousel-button prev">&#10094;</button>
-    <button class="carousel-button next">&#10095;</button>
-  </section>
-
-  <footer>
-    &copy; 2025 Amrit Virk. Designed with style and purpose.
-  </footer>
-
-  <!-- Carousel Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
   <script>
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector('.carousel-button.next');
-    const prevButton = document.querySelector('.carousel-button.prev');
-    const indicators = document.querySelectorAll('.indicator');
-    let currentSlide = 0;
-
-    function updateSlidePosition() {
-      const slideWidth = slides[0].getBoundingClientRect().width;
-      track.style.transform = 'translateX(-' + (slideWidth * currentSlide) + 'px)';
-      indicators.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentSlide);
+    (() => {
+      const navbarHeader = document.getElementById('navbar-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbarHeader.classList.add('bg-[#fdf7f0]', 'shadow-md');
+        } else {
+          navbarHeader.classList.remove('bg-[#fdf7f0]', 'shadow-md');
+        }
       });
-    }
+    })();
 
-    nextButton.addEventListener('click', () => {
-      currentSlide = (currentSlide + 1) % slides.length;
-      updateSlidePosition();
-    });
-
-    prevButton.addEventListener('click', () => {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      updateSlidePosition();
-    });
-
-    indicators.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentSlide = index;
-        updateSlidePosition();
+    new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
       });
-    });
-
-    window.addEventListener('resize', updateSlidePosition);
-    window.addEventListener('load', updateSlidePosition);
   </script>
 
-  <!-- Scroll behaviors -->
   <script>
-    const hero = document.querySelector('.landing-hero');
-    const body = document.querySelector('body');
-    const navbar = document.querySelector('.navbar');
+  const faders = document.querySelectorAll('.fade-on-scroll');
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        body.classList.toggle("alt-bg", !entry.isIntersecting);
-      },
-      { threshold: 1.0 }
-    );
+  const options = {
+    threshold: 0.1
+  };
 
-    if (hero && body.classList.contains('index-page')) {
-      observer.observe(hero);
-    }
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+  const appearOnScroll = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100', 'translate-y-0');
       } else {
-        navbar.classList.remove('scrolled');
+        entry.target.classList.remove('opacity-100', 'translate-y-0');
       }
     });
+  }, options);
+
+  faders.forEach(el => {
+    appearOnScroll.observe(el);
+  });
   </script>
 
+
 </body>
+
 </html>
