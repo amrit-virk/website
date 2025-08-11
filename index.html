@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-20">
 
 <head>
   <meta charset="UTF-8" />
@@ -27,28 +27,24 @@
       border: 2px solid transparent;
       background-clip: content-box;
     }
-    
-
-    
     p {
-    font-size: 1.1rem;
-    color: #4b3a32;
-    line-height: 1.625;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    color: #cc5b3e;
-    font-weight: 600;
-    line-height: 1.375;
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-  }
-
-  h1 { font-size: 2.25rem; }
-  h2 { font-size: 1.875rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.125rem; }
-  h6 { font-size: 1rem; }
-</style>
+      font-size: 1.1rem;
+      color: #4b3a32;
+      line-height: 1.625;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: #cc5b3e;
+      font-weight: 600;
+      line-height: 1.375;
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.875rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.125rem; }
+    h6 { font-size: 1rem; }
+  </style>
 </head>
 
 <body class="bg-[#fdf7f0] text-[#010001] scroll-smooth">
@@ -56,21 +52,21 @@
   <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
     <div class="flex w-full items-center justify-between px-6 py-4">
       <div class="text-2xl font-bold text-black tracking-tight">
-        <a href="index.html">Amrit Virk</a>
+        <a href="index.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
       </div>
       <nav class="flex space-x-8 text-[#4b3a32] font-medium">
         <a href="Projects/projects.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
         <a href="resume.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
-        <a href="about.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
+        <a href="#about-me" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
         <a href="contact.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Splash -->
+  <!-- Hero Splash Section -->
   <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-50">
     <img src="Images/Headshot.JPG" alt="Amrit Virk" class="w-48 h-48 rounded-full shadow-lg object-cover border-4 border-[#d9c4b1] sm:w-56 sm:h-56 mb-6" />
-    <h1 class="text-5xl font-bold text-[#010001] ">Hi, I’m Amrit Virk.</h1>
+    <h1 class="text-5xl font-bold text-[#010001]">Hi, I’m Amrit Virk.</h1>
     <p class="mt-2 text-xl text-[#874000] pt-3">Engineer. Builder. Creator. Turning ideas into reality.</p>
     <div class="flex flex-wrap justify-center gap-3 mt-5">
       <a href="Projects/projects.html" class="bg-[#874000] text-white text-base px-4 py-2 rounded hover:bg-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">View Projects</a>
@@ -79,74 +75,129 @@
     </div>
   </section>
 
-  <!-- Main Content -->
-  <div class="bg-[#d9c4b1] w-full fade-on-scroll bg-[#d9c4b1] w-full opacity-0 translate-y-4 transition-all duration-1000">
-    <main class="px-6 space-y-10 pt-5 pb-24 mx-40">
+  <!-- Main Content Container with Scroll Animation -->
+  <div id="about-me" class = "bg-[#d9c4b1] w-full fade-on-scroll opacity-0 translate-y-4 transition-all duration-1000">
+    <main class="px-6 space-y-10 pt-5 pb-10 mx-40">
+      <!-- About Me Section -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 gap-x-10 gap-y-2 text-base text-[#4b3a32] leading-relaxed pt-5">
+        <section class="text-base text-[#4b3a32] leading-relaxed">
+          <h2 class="text-3xl font-semibold text-[#cc5b3e] mb-4">About Me</h2>
+          <p>
+            I'm a second-year Electrical Engineering student at McMaster University with a strong interest in embedded systems, automation, and circuit design. I enjoy building efficient, hands-on solutions that bridge hardware and software. My approach combines technical depth with practical application, and I’m always looking to expand my skills through challenging projects and continuous learning.
+            <br><br>
+            Outside of engineering, I love using my free time to work on myself and refine who I am as a person. I have a strong passion for sports, video games, and music, often catching myself doing a combination of the three, whether that’s listening to music while shooting hoops or gaming with friends to unwind.
+          </p>
+        </section>
+        <section>
+          <img src="Images/mcmaster.jpg" alt="McMaster University" class="w-full h-auto object-cover rounded-lg shadow-md mb-4">
+        </section>
+      </div>
+
+      <!-- Outdoors & Fitness Section -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 gap-x-10 gap-y-2 text-base text-[#4b3a32] leading-relaxed">
+        <section>
+          <img src="Images/lake.png" alt="scenic lake view" class="w-full h-auto object-cover rounded-lg shadow-md mb-4">
+        </section>
+        <section class="text-base text-[#4b3a32] leading-relaxed">
+          <br><br><br>
+          <p>
+            I also love spending time outside, whether it’s going for walks, exploring new places, or just getting some fresh air to reset. Fitness plays a big role in my routine, and I spend time in the gym focusing on weight training and personal discipline. I'm a tech enthusiast at heart — always exploring new tools, AI applications, or building side projects to automate everyday tasks. I value clean design, continuous growth, and staying curious in everything I do.
+          </p>
+        </section>
+      </div>
+
+      <!-- What I'm Working on Currently Section -->
       <div class="grid grid-cols-2 sm:grid-cols-2 gap-x-10 gap-y-2 text-base text-[#4b3a32] leading-relaxed">
         <section class="text-base text-[#4b3a32] leading-relaxed">
-          <h2 class="text-2xl font-semibold text-[#cc5b3e] mb-4">About Me</h2>
-          <p>I'm a second-year Electrical Engineering student at McMaster University with a strong interest in embedded systems, automation, and circuit design. I enjoy building efficient, hands-on solutions that bridge hardware and software. My approach combines technical depth with practical application, and I’m always looking to expand my skills through challenging projects and continuous learning.
-            <br><br>Outside of engineering, I love using my free time to work on myself and refine who I am as a person. I have a strong passion for sports, video games, and music, often catching myself doing a combination of the three, whether that’s listening to music while shooting hoops or gaming with friends to unwind. I also love spending time outside, whether it’s going for walks, exploring new places, or just getting some fresh air to reset. Fitness plays a big role in my routine, and I spend time in the gym focusing on weight training and personal discipline. I'm a tech enthusiast at heart — always exploring new tools, AI applications, or building side projects to automate everyday tasks. I value clean design, continuous growth, and staying curious in everything I do.</p>
+          <h2 class="text-3xl font-semibold text-[#cc5b3e] mb-4">What I'm Working on Currently</h2>
+          <p>
+            I'm currently working as an Engineering Intern at Metex Heat Treating & Exactatherm Ltd. for the Summer 2025 term, where I'm leading a project focused on implementing a new company-wide ERP system. Outside of work, I'm pursuing certifications in both Amazon Web Services and Google Cloud Platform. I'm also planning to begin several personal projects to continue sharpening my technical skills.
+          </p>
         </section>
-
-        <section class="text-base text-[#4b3a32] leading-relaxed">
-          <h2 class="text-2xl font-semibold text-[#cc5b3e] mb-4">What I Do</h2>
-          <p>Embedded Systems & Microcontrollers</p>
-          <p>Circuit Design & Simulation</p>
-          <p>Automation & Scripting</p>
-          <p>3D Modeling & CAD</p>
-          <p>System Integration & Problem Solving</p>
-          <p>Data Visualization & Analysis</p>
-          <p>Web Development & UI Design</p>
-          <p>& More</p>
+        <section>
+          <div class="grid grid-rows-2 gap-4">
+            <div>
+              <img src="Images/metex.png" alt="metex logo" class="w-full h-auto object-cover rounded-lg mb-4">
+            </div>
+            <div>
+              <img src="Images/exactatherm.png" alt="exactatherm logo" class="w-full h-auto object-cover rounded-lg mb-4">
+            </div>
+          </div>
         </section>
       </div>
 
-      <section class="text-base text-[#4b3a32] leading-relaxed">
-        <h2 class="text-2xl font-semibold text-[#cc5b3e] mb-4">What I'm Working on Currently</h2>
-        <p>I'm currently employed as an engineering intern at Metex Heat Treating for the summer 2025 term. My day to day tasks involve creating engineering drawings for parts, furnaces, and other systems. Outside of work, I'm currenly in the process of getting certified for both Amazon Web Services and Google Cloud Platform. I'm also looking to start working on a few personal projects which will help me further refines my skills.</p>
+      <!-- What I Do Section -->
+      <section class="mx-auto">
+        <h2 class="text-3xl font-bold text-[#cc5b3e] mb-6">What I Do</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">
+            <h3 class="text-lg font-semibold text-[#874000]">🧠 Embedded Systems & Microcontrollers</h3>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">
+            <h3 class="text-lg font-semibold text-[#874000]">📐 Circuit Design & Simulation</h3>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">
+            <h3 class="text-lg font-semibold text-[#874000]">⚙️ Automation & Scripting</h3>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">
+            <h3 class="text-lg font-semibold text-[#874000]">📊 Data Analysis</h3>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">
+            <h3 class="text-lg font-semibold text-[#874000]">🖥️ Web Dev</h3>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow hover:scale-105 transition">
+            <h3 class="text-lg font-semibold text-[#874000]">🛠️ CAD Modeling</h3>
+          </div>
+        </div>
       </section>
 
+      <!-- Swiper Project Showcase Section -->
       <section id="projects" class="body-text">
-  <h2 class="text-2xl font-semibold text-[#cc5b3e] mb-4">My Projects</h2>
-  <p class="mb-4">Find some of my recent projects below.</p>
-
-  <div class="swiper mySwiper w-full">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide flex justify-center px-4">
-        <div class="bg-white rounded-lg overflow-hidden shadow-md max-w-sm">
-          <img src="Images/slide1.jpg" class="w-full h-48 object-cover" />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold text-[#874000] mb-2">Project Title 1</h3>
-            <p>Short description of the project and tools used.</p>
+        <h2 class="text-3xl font-semibold text-[#cc5b3e] mb-4">My Projects</h2>
+        <p class="mb-4">Find some of my recent projects below.</p>
+        <!-- Swiper Container for Project Cards -->
+        <div class="swiper mySwiper w-full">
+          <div class="swiper-wrapper">
+            <!-- Individual Project Card -->
+            <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[28rem] transform transition-transform duration-300 hover:scale-105">
+                <img src="Images/Steelhead.png" class="w-full h-48 object-cover" />
+                <div class="p-6">
+                  <a href="" class="text-xl font-bold text-[#874000] mb-2">Steelhead Technologies ERP</a>
+                  <p class="text-[#4b3a32] text-sm">Short description of the project and tools used.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[28rem] transform transition-transform duration-300 hover:scale-105">
+                <img src="Images/spatial-scanner.png" class="w-full h-48 object-cover" />
+                <div class="p-6">
+                  <a href="Projects/spatial-mapping.html" class="text-xl font-bold text-[#874000] mb-2">Spatial Mapping System</a>
+                  <p class="text-[#4b3a32] text-sm">Short description of the project and tools used.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[28rem] transform transition-transform duration-300 hover:scale-105">
+                <img src="Images/snake_game.png" class="w-full h-48 object-cover" />
+                <div class="p-6">
+                  <a href="Projects/snake_game.html" class="text-xl font-bold text-[#874000] mb-2">Snake Game</a>
+                  <p class="text-[#4b3a32] text-sm">Short description of the project and tools used.</p>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-button-next text-[#874000]"></div>
+          <div class="swiper-button-prev text-[#874000]"></div>
+          <div class="swiper-pagination mt-4"></div>
         </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="swiper-slide flex justify-center px-4">
-        <div class="bg-white rounded-lg overflow-hidden shadow-md max-w-sm">
-          <img src="Images/slide2.jpg" class="w-full h-48 object-cover" />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold text-[#874000] mb-2">Project Title 2</h3>
-            <p>Short description of the project and tools used.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Swiper navigation and pagination -->
-    <div class="swiper-button-next text-[#874000]"></div>
-    <div class="swiper-button-prev text-[#874000]"></div>
-    <div class="swiper-pagination mt-4"></div>
-  </div>
-</section>
-
+      </section>
     </main>
   </div>
 
-  <footer class="text-center text-sm text-gray-600 mt-12 mb-6">&copy; 2025 Amrit Virk. Designed with style and purpose.</footer>
+  <footer class="text-center text-sm text-gray-600 mt-6 mb-6">&copy; 2025 Amrit Virk. Designed with style and purpose.</footer>
 
+  <!-- SwiperJS CDN for Carousel Functionality -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <script>
@@ -161,10 +212,11 @@
       });
     })();
 
-    new Swiper(".mySwiper", {
+    // Initialize Swiper slider after DOM loads
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper(".mySwiper", {
         loop: true,
         spaceBetween: 20,
-        slidesPerView: 1,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
@@ -173,36 +225,30 @@
           el: ".swiper-pagination",
           clickable: true
         },
-        breakpoints: {
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 }
-        }
+        slidesPerView: 1
       });
+    });
   </script>
 
   <script>
-  const faders = document.querySelectorAll('.fade-on-scroll');
-
-  const options = {
-    threshold: 0.1
-  };
-
-  const appearOnScroll = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('opacity-100', 'translate-y-0');
-      } else {
-        entry.target.classList.remove('opacity-100', 'translate-y-0');
-      }
+    // Fade-on-scroll animation setup
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll('.fade-on-scroll');
+      const options = { threshold: 0.1 };
+      const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            entry.target.classList.remove('opacity-100', 'translate-y-0');
+          }
+        });
+      }, options);
+      faders.forEach(el => {
+        appearOnScroll.observe(el);
+      });
     });
-  }, options);
-
-  faders.forEach(el => {
-    appearOnScroll.observe(el);
-  });
   </script>
-
-
 </body>
 
 </html>

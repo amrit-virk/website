@@ -1,72 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-20">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spatial Mapping System - Amrit Virk</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amrit Virk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
+<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth font-sans">
 
-<script src="../navbar.js"></script>
-
-<body>
-
-  <header class="navbar">
-    <div class="navbar-container">
-      <div class="logo">
-        <a href="../index.html">Amrit Virk</a>
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
+    <div class="flex w-full items-center justify-between px-6 py-4">
+      <div class="text-2xl font-bold text-black tracking-tight">
+        <a href="../index.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
       </div>
-      <nav class="nav-links">
-        <a href="projects.html">Projects</a>
-        <a href="../resume.html">Resume</a>
-        <a href="../about.html">About</a>
-        <a href="../contact.html">Contact</a>
+      <nav class="flex space-x-8 text-[#4b3a32] font-medium">
+        <a href="projects.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
+        <a href="resume.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
+        <a href="about.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
+        <a href="contact.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="project-detail">
-    <section class="project-hero">
-      <img src="../Images/spatial-scanner.png" alt="Spatial Mapping System">
-      <div class="project-header">
-        <h1>Spatial Mapping System</h1>
-        <p class="project-subtitle">A ToF-based 3D scanning system that maps environments in real time.</p>
+  <!-- Hero -->
+  <section class="pt-32 pb-20 bg-[#fff6ed] px-6 text-center">
+    <img src="../Images/spatial-scanner.png" alt="Spatial Mapping System" class="mx-auto w-full max-w-xl rounded-xl shadow-md">
+    <h1 class="mt-8 text-4xl font-bold text-[#4b3a32]">Spatial Mapping System</h1>
+    <p class="mt-2 text-lg text-[#4b3a32]">A ToF-based 3D scanning system that maps environments in real time.</p>
+  </section>
+
+  <!-- Content Section -->
+  <div class="w-full fade-on-scroll opacity-0 translate-y-4 transition-all duration-1000">
+    <main class="max-w-4xl mx-auto px-6 space-y-16">
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Overview</h2>
+        <p class="text-base leading-relaxed">
+          The Spatial Mapping System uses a time-of-flight (ToF) sensor that is connected to a stepper motor which rotates a full 360 degrees. 
+          This motor is then mounted into a housing which holds all the components to run the system alongside making it easier to collect readings. 
+          The collected data is then and run in Python via Open3D which creates a full digital scan in all three planes. 
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Tools & Technologies</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Texas Instrumentals MSP432E401Y microcontroller</li>
+          <li>Time-of-Flight (ToF) Sensor – VL53L1X</li>
+          <li>Stepper Motor – 28BYJ-48 with ULN2003 Driver</li>
+          <li>Real-time 3D visualization using Python & Open3D</li>
+          <li>I2C & UART Communication</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Challenges</h2>
+        <p class="text-base leading-relaxed">
+          One of the main challenges was ensuring accurate readings from the ToF sensor while it was rotating. This meant that the housing was attached properly and that no wires would get tangled or caught in the motor's movement and disrupt the sensor.
+          Additionally, integrating the stepper motor with the microcontroller required careful timing and control logic to ensure smooth operation. It also required a strong understanding of how the I2C and UART protocols worked to ensure that the data was being sent and received correctly.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Gallery</h2>
+        <!-- Swiper Container for Project Cards -->
+        <div class="swiper mySwiper w-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[28rem] transform transition-transform duration-300 hover:scale-105">
+                <img src="../Images/spatial-scanner.png" alt="Spatial Scanner">
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[28rem] transform transition-transform duration-300 hover:scale-105">
+                <img src="../Images/spatial-scanner.png" alt="Spatial Scanner">
+              </div>
+            </div>
+            <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[28rem] transform transition-transform duration-300 hover:scale-105">
+                <img src="../Images/spatial-scanner.png" alt="Spatial Scanner">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next text-[#874000]"></div>
+          <div class="swiper-button-prev text-[#874000]"></div>
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+      </section>
+
+      <div>
+        <a href="projects.html"
+           class="inline-block text-[#cc5b3e] font-semibold text-lg hover:underline hover:text-[#a2422b] transition">&larr; Back to Projects</a>
       </div>
-    </section>
+    </main>
+  </div>
 
-    <section class="project-content">
-      <h2>Overview</h2>
-      <p>
-        The Spatial Mapping System uses a time-of-flight (ToF) distance sensor mounted on a pan-tilt system to gather 3D positional data.
-        Data is collected in real-time and processed to generate a point cloud representation of the scanned area.
-      </p>
-
-      <h2>Tools & Technologies</h2>
-      <ul>
-        <li>VL53L1X ToF Sensor</li>
-        <li>Arduino Nano</li>
-        <li>Servo Motors (Pan/Tilt)</li>
-        <li>Python (Visualization with Open3D)</li>
-        <li>Serial Communication</li>
-      </ul>
-
-      <h2>Challenges</h2>
-      <p>
-        Ensuring accurate timing between sensor readings and motor positions was critical. We implemented a feedback system and synchronized scan rates to improve resolution and reduce drift.
-      </p>
-
-      <h2>Gallery</h2>
-      <img src="images/project1.jpg" alt="Scan result example" class="project-img">
-    </section>
-
-    <div class="back-button">
-      <a href="projects.html" class="cta">← Back to Projects</a>
-    </div>
-  </main>
-
-  <footer>
+  <footer class="text-center text-sm text-[#4b3a32] py-8">
     &copy; 2025 Amrit Virk. Built with passion and purpose.
   </footer>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    // Navbar shadow on scroll
+    (() => {
+      const navbarHeader = document.getElementById('navbar-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbarHeader.classList.add('bg-[#fdf7f0]', 'shadow-md');
+        } else {
+          navbarHeader.classList.remove('bg-[#fdf7f0]', 'shadow-md');
+        }
+      });
+    })();
+
+    // Swiper initialization
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        slidesPerView: 1
+      });
+    });
+
+    // Fade-on-scroll animation setup
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll('.fade-on-scroll');
+      const options = { threshold: 0.1 };
+      const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            entry.target.classList.remove('opacity-100', 'translate-y-0');
+          }
+        });
+      }, options);
+      faders.forEach(el => {
+        appearOnScroll.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
