@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amrit Virk</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -15,12 +13,12 @@
 
   <!-- Navbar -->
   <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
-    <div class="flex w-full items-center justify-between px-6 py-4">
+    <div class="flex w-full flex-wrap items-center justify-between px-6 py-4 gap-y-2">
       <div class="text-2xl font-bold text-black tracking-tight">
         <a href="index.html"
-          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
+          class="whitespace-nowrap hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
       </div>
-      <nav class="flex gap-x-6 sm:gap-x-8 text-[#4b3a32] font-medium overflow-x-auto whitespace-nowrap">
+      <nav class="flex flex-wrap gap-x-6 gap-y-2 text-[#4b3a32] font-medium w-full sm:w-auto">
         <a href="Projects/projects.html"
           class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
         <a href="resume.html"
@@ -130,10 +128,8 @@
       <section id="projects" class="body-text">
         <h2 class="text-3xl font-semibold text-[#cc5b3e] mb-4">My Projects</h2>
         <p class="mb-4">Find some of my recent projects below.</p>
-        <!-- Swiper Container for Project Cards -->
         <div class="swiper mySwiper w-full">
           <div class="swiper-wrapper">
-            <!-- Individual Project Card -->
             <div class="swiper-slide flex justify-center px-4 py-4 my-10">
               <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[30rem] transform transition-transform duration-300 hover:scale-105">
                 <img src="Images/Steelhead.png" class="w-full h-48 object-cover" />
@@ -172,7 +168,6 @@
 
   <footer class="text-center text-sm text-gray-600 mt-6 mb-6">&copy; 2025 Amrit Virk. Designed with style and purpose.</footer>
 
-  <!-- SwiperJS CDN for Carousel Functionality -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <script>
@@ -187,7 +182,6 @@
       });
     })();
 
-    // Initialize Swiper slider after DOM loads
     document.addEventListener("DOMContentLoaded", function () {
       new Swiper(".mySwiper", {
         loop: true,
@@ -206,7 +200,6 @@
   </script>
 
   <script>
-    // Fade-on-scroll animation setup
     document.addEventListener("DOMContentLoaded", function () {
       const faders = document.querySelectorAll('.fade-on-scroll');
       const options = { threshold: 0.1, rootMargin: "0px 0px -10% 0px" };
@@ -225,5 +218,4 @@
     });
   </script>
 </body>
-
 </html>
