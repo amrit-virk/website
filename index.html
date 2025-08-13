@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth font-sans">
+<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth font-sans overflow-x-hidden">
 
   <!-- Navbar -->
   <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
@@ -32,21 +32,27 @@
       </nav>
     </div>
   </header>
+
   <!-- Hero Splash Section -->
-  <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-50">
-    <img src="Images/Headshot.JPG" alt="Amrit Virk" class="w-48 h-48 rounded-full shadow-lg object-cover border-4 border-[#d9c4b1] sm:w-56 sm:h-56 mb-6" />
-    <h1 class="text-5xl font-bold text-[#010001]">Hi, I’m Amrit Virk.</h1>
+  <section class="relative min-h-[100svh] flex flex-col items-center justify-center text-center px-4 pt-50">
+    <img src="Images/Headshot2.png" alt="Amrit Virk" class="w-48 h-48 rounded-full shadow-lg object-cover border-4 border-[#d9c4b1] sm:w-56 sm:h-56 mb-6" />
+    <h1 class="text-5xl font-bold text-[#010001]">Hi, I’m Amrit Virk!</h1>
     <p class="mt-2 text-xl text-[#874000] pt-3">Engineer. Builder. Creator. Turning ideas into reality.</p>
     <div class="flex flex-wrap justify-center gap-3 mt-5">
       <a href="Projects/projects.html" class="bg-[#874000] text-white text-base px-4 py-2 rounded hover:bg-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">View Projects</a>
       <a href="resume.html" class="bg-[#874000] text-white text-base px-4 py-2 rounded hover:bg-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
       <a href="contact.html" class="bg-[#874000] text-white text-base px-4 py-2 rounded hover:bg-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
     </div>
+    <a href="#about-me" class="absolute bottom-6 text-[#874000] hover:text-[#cc5b3e] transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </a>
   </section>
 
   <!-- Main Content Container with Scroll Animation -->
   <div id="about-me" class = "bg-[#d9c4b1] w-full fade-on-scroll opacity-0 translate-y-4 transition-all duration-1000">
-    <main class="px-6 space-y-10 pt-5 pb-10 mx-40">
+    <main class="px-6 space-y-10 pt-5 pb-10 mx-4 sm:mx-6 lg:mx-40">
       <!-- About Me Section -->
       <div class="grid grid-cols-2 sm:grid-cols-2 gap-x-10 gap-y-2 text-base text-[#4b3a32] leading-relaxed pt-5">
         <section class="text-base text-[#4b3a32] leading-relaxed">
@@ -151,7 +157,7 @@
                 <img src="Images/snake_game.png" class="w-full h-48 object-cover" />
                 <div class="p-6">
                   <a href="Projects/snake_game.html" class="text-xl font-bold text-[#874000] mb-2">Snake Game</a>
-                  <p class="text-[#4b3a32] text-sm">A terminal based snake game made within C++.</p>
+                  <p class="text-[#4b3a32] text-sm">A terminal based snake game made within C++</p>
                 </div>
               </div>
             </div>
@@ -203,7 +209,7 @@
     // Fade-on-scroll animation setup
     document.addEventListener("DOMContentLoaded", function () {
       const faders = document.querySelectorAll('.fade-on-scroll');
-      const options = { threshold: 0.1 };
+      const options = { threshold: 0.1, rootMargin: "0px 0px -10% 0px" };
       const appearOnScroll = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
