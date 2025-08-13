@@ -1,68 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth scroll-pt-20">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amrit Virk</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    body {
-      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    html {
-      scrollbar-color: #a3a3a3 transparent;
-      scrollbar-width: thin;
-    }
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-      background-color: #a3a3a3;
-      border-radius: 4px;
-      border: 2px solid transparent;
-      background-clip: content-box;
-    }
-    p {
-      font-size: 1.1rem;
-      color: #4b3a32;
-      line-height: 1.625;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      color: #cc5b3e;
-      font-weight: 600;
-      line-height: 1.375;
-      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    h1 { font-size: 2.25rem; }
-    h2 { font-size: 1.875rem; }
-    h3 { font-size: 1.5rem; }
-    h4 { font-size: 1.25rem; }
-    h5 { font-size: 1.125rem; }
-    h6 { font-size: 1rem; }
-  </style>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth">
+<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth font-sans">
+
   <!-- Navbar -->
   <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
     <div class="flex w-full items-center justify-between px-6 py-4">
       <div class="text-2xl font-bold text-black tracking-tight">
-        <a href="index.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
+        <a href="index.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
       </div>
       <nav class="flex space-x-8 text-[#4b3a32] font-medium">
-        <a href="Projects/projects.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
-        <a href="resume.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
-        <a href="#about-me" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
-        <a href="contact.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
+        <a href="Projects/projects.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
+        <a href="resume.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
+        <a href="#about-me" 
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
+        <a href="contact.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
       </nav>
     </div>
   </header>
-
   <!-- Hero Splash Section -->
   <section class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-50">
     <img src="Images/Headshot.JPG" alt="Amrit Virk" class="w-48 h-48 rounded-full shadow-lg object-cover border-4 border-[#d9c4b1] sm:w-56 sm:h-56 mb-6" />
@@ -160,29 +129,29 @@
           <div class="swiper-wrapper">
             <!-- Individual Project Card -->
             <div class="swiper-slide flex justify-center px-4 py-4 my-10">
-              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[28rem] transform transition-transform duration-300 hover:scale-105">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[30rem] transform transition-transform duration-300 hover:scale-105">
                 <img src="Images/Steelhead.png" class="w-full h-48 object-cover" />
                 <div class="p-6">
-                  <a href="" class="text-xl font-bold text-[#874000] mb-2">Steelhead Technologies ERP</a>
-                  <p class="text-[#4b3a32] text-sm">Short description of the project and tools used.</p>
+                  <a href="Projects/steelhead.html" class="text-xl font-bold text-[#874000] mb-2">Steelhead Technologies ERP</a>
+                  <p class="text-[#4b3a32] text-sm">Implemented the Steelhead ERP system from the ground up</p>
                 </div>
               </div>
             </div>
             <div class="swiper-slide flex justify-center px-4 py-4 my-10">
-              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[28rem] transform transition-transform duration-300 hover:scale-105">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[30rem] transform transition-transform duration-300 hover:scale-105">
                 <img src="Images/spatial-scanner.png" class="w-full h-48 object-cover" />
                 <div class="p-6">
                   <a href="Projects/spatial-mapping.html" class="text-xl font-bold text-[#874000] mb-2">Spatial Mapping System</a>
-                  <p class="text-[#4b3a32] text-sm">Short description of the project and tools used.</p>
+                  <p class="text-[#4b3a32] text-sm">A ToF based 3D scanning system that maps environments in real-time</p>
                 </div>
               </div>
             </div>
             <div class="swiper-slide flex justify-center px-4 py-4 my-10">
-              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[28rem] transform transition-transform duration-300 hover:scale-105">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[30rem] transform transition-transform duration-300 hover:scale-105">
                 <img src="Images/snake_game.png" class="w-full h-48 object-cover" />
                 <div class="p-6">
                   <a href="Projects/snake_game.html" class="text-xl font-bold text-[#874000] mb-2">Snake Game</a>
-                  <p class="text-[#4b3a32] text-sm">Short description of the project and tools used.</p>
+                  <p class="text-[#4b3a32] text-sm">A terminal based snake game made within C++.</p>
                 </div>
               </div>
             </div>

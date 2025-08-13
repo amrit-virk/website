@@ -1,72 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-20">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Safer Safe - Amrit Virk</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amrit Virk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
+<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth font-sans">
 
-<script src="../navbar.js"></script>
-
-<body>
-
-  <header class="navbar">
-    <div class="navbar-container">
-      <div class="logo">
-        <a href="../index.html">Amrit Virk</a>
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
+    <div class="flex w-full items-center justify-between px-6 py-4">
+      <div class="text-2xl font-bold text-black tracking-tight">
+        <a href="../index.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
       </div>
-      <nav class="nav-links">
-        <a href="projects.html">Projects</a>
-        <a href="../resume.html">Resume</a>
-        <a href="../about.html">About</a>
-        <a href="../contact.html">Contact</a>
+      <nav class="flex space-x-8 text-[#4b3a32] font-medium">
+        <a href="projects.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
+        <a href="../resume.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
+        <a href="../index.html#about-me" 
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
+        <a href="../contact.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="project-detail">
-    <section class="project-hero">
-      <img src="images/project1.jpg" alt="Spatial Mapping System">
-      <div class="project-header">
-        <h1>The Safer Safe</h1>
-        <p class="project-subtitle">A ToF-based 3D scanning system that maps environments in real time.</p>
+  <!-- Hero -->
+  <section class="pt-32 pb-10 bg-[#fff6ed] px-6 text-center">
+    <img src="../Images/safer_safe.png" alt="Safer Safe" class="mx-auto w-full max-w-xl rounded-xl shadow-md">
+    <h1 class="mt-8 text-4xl font-bold text-[#4b3a32]">The Safer Safe</h1>
+    <p class="mt-2 text-lg text-[#4b3a32]">A secure safe with two-factor authentication by integrating fingerprint recognition and device-based unlocking</p>
+  </section>
+
+  <!-- Content Section -->
+  <div class="w-full fade-on-scroll opacity-0 translate-y-4 transition-all duration-1000">
+    <main class="max-w-4xl mx-auto px-6 space-y-16">
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Overview</h2>
+        <p class="text-base leading-relaxed">
+          A homemade safe which requires two-factor authentication to be opened and accessed. This project was created for my grade 12 computer engineering final and it took many hours to complete. 
+          To open the safe it requires the registered fingerprint alongside an unlocking command from the users phone. There is a time limit  to complete both checks and if only one check is completed, the safe will not open and it will reset. 
+          It was creating using an Arduino board alongside an ESP 8266 micro controller allowing communication via Wi-Fi. 
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Tools & Technologies</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Arudinio</li> 
+          <li>ESP8266 Microcontroller</li>
+          <li>C & C++</li>
+          <li>Circuit Design</li>
+          <li>Soldering</li>
+          <li>Manufacturing</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Challenges</h2>
+        <p class="text-base leading-relaxed">
+          This was my first big project so everything was challenging as it was my first time really using all of the equipment to create something real and functional. 
+          During the development of this project, I was just learning how to use an Arduino board alongside an ESP8266 microcontroller so understanding how each thing worked and the nuances behind them was a big learning curve.
+           Moreover designing and creating the circuit was also something that took me multiple attempts to get right as I was not familiar with these concepts before, especially soldering.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Gallery</h2>
+        <!-- Swiper Container for Project Cards -->
+        <div class="swiper mySwiper w-full">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+              <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[40rem] transform transition-transform duration-300 hover:scale-105">
+                <img src="../Images/safer_safe.png" alt="Spatial Scanner">
+              </div>
+          </div>
+          <div class="swiper-button-next text-[#874000]"></div>
+          <div class="swiper-button-prev text-[#874000]"></div>
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+      </section>
+
+      <div>
+        <a href="projects.html"
+           class="inline-block text-[#cc5b3e] font-semibold text-lg hover:underline hover:text-[#a2422b] transition">&larr; Back to Projects</a>
       </div>
-    </section>
+    </main>
+  </div>
 
-    <section class="project-content">
-      <h2>Overview</h2>
-      <p>
-        The Spatial Mapping System uses a time-of-flight (ToF) distance sensor mounted on a pan-tilt system to gather 3D positional data.
-        Data is collected in real-time and processed to generate a point cloud representation of the scanned area.
-      </p>
-
-      <h2>Tools & Technologies</h2>
-      <ul>
-        <li>VL53L1X ToF Sensor</li>
-        <li>Arduino Nano</li>
-        <li>Servo Motors (Pan/Tilt)</li>
-        <li>Python (Visualization with Open3D)</li>
-        <li>Serial Communication</li>
-      </ul>
-
-      <h2>Challenges</h2>
-      <p>
-        Ensuring accurate timing between sensor readings and motor positions was critical. We implemented a feedback system and synchronized scan rates to improve resolution and reduce drift.
-      </p>
-
-      <h2>Gallery</h2>
-      <img src="images/project1.jpg" alt="Scan result example" class="project-img">
-    </section>
-
-    <div class="back-button">
-      <a href="projects.html" class="cta">← Back to Projects</a>
-    </div>
-  </main>
-
-  <footer>
+  <footer class="text-center text-sm text-[#4b3a32] py-8">
     &copy; 2025 Amrit Virk. Built with passion and purpose.
   </footer>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    // Navbar shadow on scroll
+    (() => {
+      const navbarHeader = document.getElementById('navbar-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbarHeader.classList.add('bg-[#fdf7f0]', 'shadow-md');
+        } else {
+          navbarHeader.classList.remove('bg-[#fdf7f0]', 'shadow-md');
+        }
+      });
+    })();
+
+    // Swiper initialization
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        slidesPerView: 1
+      });
+    });
+
+    // Fade-on-scroll animation setup
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll('.fade-on-scroll');
+      const options = { threshold: 0.1 };
+      const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            entry.target.classList.remove('opacity-100', 'translate-y-0');
+          }
+        });
+      }, options);
+      faders.forEach(el => {
+        appearOnScroll.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>

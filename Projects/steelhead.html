@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-20">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amrit Virk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
+    <div class="flex w-full items-center justify-between px-6 py-4">
+      <div class="text-2xl font-bold text-black tracking-tight">
+        <a href="../index.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
+      </div>
+      <nav class="flex space-x-8 text-[#4b3a32] font-medium">
+        <a href="projects.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
+        <a href="../resume.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
+        <a href="../index.html#about-me" 
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
+        <a href="../contact.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-10 bg-[#fff6ed] px-6 text-center">
+    <img src="../Images/Steelhead.png" alt="Steelhead" class="mx-auto w-full max-w-2xl rounded-xl shadow-md bg-white">
+    <h1 class="mt-8 text-4xl font-bold text-[#4b3a32]">Steelhead Technologies ERP</h1>
+    <p class="mt-2 text-lg text-[#4b3a32]">Implemented the Steelhead ERP system from the ground up</p>
+  </section>
+
+  <!-- Content Section -->
+  <div class="w-full opacity-100 translate-y-4 transition-all duration-1000">
+    <main class="max-w-4xl mx-auto px-6 space-y-16">
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Overview</h2>
+        <p class="text-base leading-relaxed">
+            During my Summer 2025 internship at Metex Heat Treating Ltd. and Exactatherm Ltd., I served as the project lead for implementing a new ERP system within Exactatherm called Steelhead. 
+            The main objective was to create a system that was intuitive and user-friendly for all employees, regardless of their role.
+             Because Exactatherm is an aerospace heat treater, every detail of the implementation had to be carefully considered, as the components will ultimately end up in an aircraft.
+            This involved tireless work over weekends alongside extensive training sessions to ensure that all employees were comfortable using the new system. I also created detailed documentation and guides to assist with the transition. The implementation of Steelhead has significantly improved operational efficiency, data accuracy, and overall workflow within Exactatherm as seen below.
+        </p>
+      </section>
+
+      <section class="fade-on-scroll opacity-0 translate-y-4 transition-all duration-1000">
+        <div class="grid grid-cols-2 sm:grid-cols-2 gap-x-10 gap-y-2 text-base text-[#4b3a32] leading-relaxed">
+        <section class="text-base leading-relaxed text-[#874000] bg-white rounded-xl shadow hover:scale-105 transition pt-8 text-center">
+          <h2 class="text-6xl font-semibold">30,000 +</h2>
+          <p class="text-base leading-relaxed pt-5 pb-3">Customer Files Migrated</p>
+        </section>
+        <section class="text-base leading-relaxed text-[#874000] bg-white rounded-xl shadow hover:scale-105 transition pt-8 text-center">
+          <h2 class="text-6xl font-semibold">+40%</h2>
+          <p class="text-base leading-relaxed pt-5 pb-3">Increase in Overall Workflow Metrics</p>
+        </section>
+      </div>
+      </section>
+
+      <section class="fade-on-scroll opacity-0 translate-y-4 transition-all duration-1000">
+        <div class="rounded-2xl shadow-lg p-6 bg-white">
+      <div class="mb-4 flex items-center justify-between">
+        <h2 class="text-2xl font-semibold text-[#874000]">Average Dock to Dock Time Per Process</h2>
+        <span class="text-sm opacity-70">Comparison in Days</span>
+      </div>
+      <div class="relative h-64">
+        <canvas id="comparisonChart" class="!w-full !h-full"></canvas>
+      </div>
+    </div>
+      </section>
+
+      <section class="fade-on-scroll opacity-0 translate-y-4 transition-all duration-1000">
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Tools Technologies & Skills</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Steelhead Technologies</li> 
+          <li>Software Design</li>
+          <li>Process Design</li>
+          <li>Data Migration</li>
+          <li>Automation & Scripting</li>
+          <li>Leadership</li>
+          <li>Workflow Optimization</li>
+          <li>Project Management</li>
+          <li>Training & Educating</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Challenges</h2>
+        <p class="text-base leading-relaxed">
+         The company was transitioning from an older software system that had been in use for over 20 years, so ensuring that the migration to Steelhead went as smoothly as possible was my utmost priority. 
+         Each department presented its own set of unique challenges and issues, all of which needed to be addressed to ensure full functionality.
+        </p>
+        <br>
+        <p class="text-base leading-relaxed">Specifically, one of the primary issues I faced was creating every single process and spec used on the production floor. 
+            This required me to learn and understand the manufacturing and material sciences side of the business to ensure that everything was created to specification. 
+            It involved extensive collaboration with the quality and production managers to verify that my work was correct. Another area where I faced challenges was in the invoicing and sales department. 
+            With little prior experience in this area, I was further faced with difficulties in implementation, as I had to ensure that all numbers were reported accurately and that invoices were reaching customers. </p>
+      </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-[#874000] mb-4">Gallery</h2>
+      <!-- Swiper Container for Project Cards -->
+      <div class="swiper mySwiper w-full">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[46rem] transform transition-transform duration-300 hover:scale-105">
+            <img src="../Images/Home.png" alt="Steelhead homepage" class="w-full h-auto">
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[46rem] transform transition-transform duration-300 hover:scale-105">
+            <img src="../Images/process.png" alt="Steelhead" class="w-full h-auto">
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[46rem] transform transition-transform duration-300 hover:scale-105">
+            <img src="../Images/workboard1.png" alt="Steelhead" class="w-full h-auto">
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[46rem] transform transition-transform duration-300 hover:scale-105">
+            <img src="../Images/workboard2.png" alt="Steelhead" class="w-full h-auto">
+          </div>
+        </div>
+        </div>
+        <div class="swiper-button-next text-[#874000]"></div>
+        <div class="swiper-button-prev text-[#874000]"></div>
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </section>
+
+      <div>
+        <a href="projects.html"
+           class="inline-block text-[#cc5b3e] font-semibold text-lg hover:underline hover:text-[#a2422b] transition">&larr; Back to Projects</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="text-center text-sm text-[#4b3a32] py-8">
+    &copy; 2025 Amrit Virk. Built with passion and purpose.
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    // Navbar shadow on scroll
+    (() => {
+      const navbarHeader = document.getElementById('navbar-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbarHeader.classList.add('bg-[#fdf7f0]', 'shadow-md');
+        } else {
+          navbarHeader.classList.remove('bg-[#fdf7f0]', 'shadow-md');
+        }
+      });
+    })();
+
+    // Swiper initialization
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        slidesPerView: 1
+      });
+    });
+
+    // Fade-on-scroll animation setup
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll('.fade-on-scroll');
+      const options = { threshold: 0.1 };
+      const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            entry.target.classList.remove('opacity-100', 'translate-y-0');
+          }
+        });
+      }, options);
+      faders.forEach(el => {
+        appearOnScroll.observe(el);
+      });
+    });
+  </script>
+
+<script>
+    const ctx = document.getElementById('comparisonChart');
+    const comparisonChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Gas Quench', 'Aging - Open', 'Oil Quench - Double Temper'],
+        datasets: [
+          {
+            label: 'Before',
+            data: [11.67, 10.67, 8.95],
+            backgroundColor: 'rgba(75, 85, 99, 0.5)',
+            borderColor: 'rgba(75, 85, 99, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'After',
+            data: [9.868, 9.606, 7.118],
+            backgroundColor: 'rgba(204, 91, 62, 0.6)',
+            borderColor: '#cc5b3e',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: true, position: 'top' },
+          tooltip: { enabled: true }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { precision:0 }, grid: { drawBorder:false } },
+          x: { grid: { display:false } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

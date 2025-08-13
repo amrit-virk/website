@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-20">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amrit Virk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
+    <div class="flex w-full items-center justify-between px-6 py-4">
+      <div class="text-2xl font-bold text-black tracking-tight">
+        <a href="../index.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
+      </div>
+      <nav class="flex space-x-8 text-[#4b3a32] font-medium">
+        <a href="projects.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
+        <a href="../resume.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
+        <a href="../index.html#about-me" 
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
+        <a href="../contact.html"
+          class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-10 bg-[#fff6ed] px-6 text-center">
+    <img src="../Images/dc_power_supply.png" alt="" class="mx-auto w-full max-w-4xl rounded-xl shadow-md">
+    <h1 class="mt-12 text-4xl font-bold text-[#4b3a32]">DC Power Supply</h1>
+    <p class="mt-2 text-lg text-[#4b3a32]">A dc power supply that delivers 10 mA at 3V ± 0.1V from a source that is 120V (rms) at 1 kHz</p>
+  </section>
+
+  <!-- Content Section -->
+  <div class="w-full fade-on-scroll opacity-0 translate-y-4 transition-all duration-1000">
+    <main class="max-w-4xl mx-auto px-6 space-y-16">
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Overview</h2>
+        <p class="text-base leading-relaxed">
+            Like other projects that I’ve worked on, this too was for a class. We were given a very specific requirement of making a dc power supply that delivers 10 mA at 3V ± 0.1V from a source that is 120V (rms) at 1 kHz using only hardware. 
+            We had to design, build, and test the circuit via the AD3 to ensure that iWt was performing as per the requirements. 	
+        </p>
+      </section>
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Tools & Technologies</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>AD3</li> 
+          <li>Wavelenghts</li>
+          <li>Circuit Design</li>
+          <li>Circuit Simulation</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-[#874000] mb-4">Challenges</h2>
+        <p class="text-base leading-relaxed">
+            In comparison to other things that I have made, I found this to be on the simpler side as I didn’t face many significant issues. I was able to design the circuit fairly quickly as it was simple consisting of just four components total. 
+        </p>
+      </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-[#874000] mb-4">Gallery</h2>
+      <!-- Swiper Container for Project Cards -->
+      <div class="swiper mySwiper w-full">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[46rem] transform transition-transform duration-300 hover:scale-105">
+            <img src="../Images/dc_power_supply.png" alt="" class="w-full h-auto">
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[46rem] transform transition-transform duration-300 hover:scale-105">
+            <img src="../Images/ac1.png" alt="" class="w-full h-auto">
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[46rem] transform transition-transform duration-300 hover:scale-105">
+            <img src="../Images/ac2.png" alt="" class="w-full h-auto">
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[46rem] transform transition-transform duration-300 hover:scale-105">
+            <img src="../Images/ac3.png" alt="" class="w-full h-auto">
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center px-4 py-4 my-10">
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden w-full max-w-[46rem] transform transition-transform duration-300 hover:scale-105">
+            <img src="../Images/ac4.png" alt="" class="w-full h-auto">
+          </div>
+        </div>
+        </div>
+        <div class="swiper-button-next text-[#874000]"></div>
+        <div class="swiper-button-prev text-[#874000]"></div>
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </section>
+
+      <div>
+        <a href="projects.html"
+           class="inline-block text-[#cc5b3e] font-semibold text-lg hover:underline hover:text-[#a2422b] transition">&larr; Back to Projects</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="text-center text-sm text-[#4b3a32] py-8">
+    &copy; 2025 Amrit Virk. Built with passion and purpose.
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    // Navbar shadow on scroll
+    (() => {
+      const navbarHeader = document.getElementById('navbar-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbarHeader.classList.add('bg-[#fdf7f0]', 'shadow-md');
+        } else {
+          navbarHeader.classList.remove('bg-[#fdf7f0]', 'shadow-md');
+        }
+      });
+    })();
+
+    // Swiper initialization
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        slidesPerView: 1
+      });
+    });
+
+    // Fade-on-scroll animation setup
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll('.fade-on-scroll');
+      const options = { threshold: 0.1 };
+      const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            entry.target.classList.remove('opacity-100', 'translate-y-0');
+          }
+        });
+      }, options);
+      faders.forEach(el => {
+        appearOnScroll.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>

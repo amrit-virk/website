@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-20">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amrit Virk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-[#fdf7f0] text-[#010001] scroll-smooth font-sans">
+  <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
+    <div class="flex w-full items-center justify-between px-6 py-4">
+      <div class="text-2xl font-bold text-black tracking-tight">
+        <a href="index.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
+      </div>
+      <nav class="flex space-x-8 text-[#4b3a32] font-medium">
+        <a href="Projects/projects.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
+        <a href="resume.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
+        <a href="index.html#about-me" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
+        <a href="contact.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl p-6 pt-28">
+    <header class="flex items-end justify-between gap-4 mb-6">
+      <div>
+        <h1 class="text-2xl font-semibold">My Resume</h1>
+        <p class="text-sm opacity-80">Find my resume as a readable or downloadable PDF below.</p>
+      </div>
+      <div class="flex gap-3">
+        <a id="openTab" target="_blank" class="px-4 py-2 rounded-xl bg-white shadow border border-[#f0e7de]">Open in new tab</a>
+        <a id="downloadLink" download class="px-4 py-2 rounded-xl text-white bg-[#cc5b3e] shadow">Download</a>
+      </div>
+    </header>
+
+    <section class="rounded-2xl bg-white shadow-lg border border-[#f0e7de]">
+      <div class="flex items-center justify-between p-3 border-b border-[#f0e7de]">
+        <span class="text-sm opacity-75" id="status">Loading…</span>
+      </div>
+      <div class="h-[80vh]">
+        <iframe id="viewer" class="w-full h-full" title="PDF Viewer" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const PDF_URL = "Amrit Virk's Resume.pdf";
+    const viewer = document.getElementById('viewer');
+    const statusEl = document.getElementById('status');
+    const downloadLink = document.getElementById('downloadLink');
+    const openTab = document.getElementById('openTab');
+
+    function setPDF(src) {
+      viewer.src = src;
+      const name = src.split('/').pop() || 'document.pdf';
+      statusEl.textContent = name;
+      downloadLink.href = src;
+      downloadLink.download = name;
+      openTab.href = src;
+    }
+
+    setPDF(PDF_URL);
+  </script>
+
+    <script>
+    (() => {
+      const navbarHeader = document.getElementById('navbar-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          navbarHeader.classList.add('bg-[#fdf7f0]', 'shadow-md');
+        } else {
+          navbarHeader.classList.remove('bg-[#fdf7f0]', 'shadow-md');
+        }
+      });
+    })();
+    </script>
+  
+</body>
+</html>
