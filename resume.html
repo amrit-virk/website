@@ -10,12 +10,13 @@
 </head>
 
 <body class="bg-[#fdf7f0] text-[#010001] scroll-smooth font-sans overflow-x-hidden">
+  <!-- Navbar -->
   <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#fdf7f0]" id="navbar-header">
     <div class="flex flex-wrap w-full items-center justify-between px-6 py-4">
       <div class="text-2xl font-bold text-black tracking-tight">
         <a href="index.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Amrit Virk</a>
       </div>
-     <nav class="flex flex-wrap gap-x-4 gap-y-2 text-[#4b3a32] font-medium justify-center sm:justify-end">
+      <nav class="flex flex-wrap gap-x-4 gap-y-2 text-[#4b3a32] font-medium justify-center sm:justify-end">
         <a href="Projects/projects.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Projects</a>
         <a href="resume.html" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">Resume</a>
         <a href="index.html#about-me" class="hover:text-[#cc5b3e] transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110">About</a>
@@ -24,11 +25,13 @@
     </div>
   </header>
 
+  <!-- Main -->
   <main class="mx-auto max-w-5xl p-6 pt-28">
-    <header class="flex items-end justify-between gap-4 mb-6">
+    <!-- Page header -->
+    <header class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
       <div>
-        <h1 class="text-2xl font-semibold">My Resume</h1>
-        <p class="text-sm opacity-80">Find my resume as a readable or downloadable PDF below.</p>
+        <h1 class="text-2xl font-semibold">My Resumes</h1>
+        <p class="text-sm opacity-80">Choose a resume and view/download the PDF.</p>
       </div>
       <div class="flex gap-3">
         <a id="openTab" target="_blank" class="px-4 py-2 rounded-xl bg-white shadow border border-[#f0e7de]">Open in new tab</a>
@@ -36,6 +39,25 @@
       </div>
     </header>
 
+    <!-- Selector -->
+    <div class="mb-4">
+      <div class="inline-flex rounded-2xl bg-white shadow border border-[#f0e7de] p-1">
+        <button type="button" data-doc="0"
+          class="doc-btn px-4 py-2 text-sm rounded-xl bg-[#010001] text-white">
+          General
+        </button>
+        <button type="button" data-doc="1"
+          class="doc-btn px-4 py-2 text-sm rounded-xl text-[#4b3a32] hover:bg-[#f8efe6]">
+          Software
+        </button>
+        <button type="button" data-doc="2"
+          class="doc-btn px-4 py-2 text-sm rounded-xl text-[#4b3a32] hover:bg-[#f8efe6]">
+          Hardware
+        </button>
+      </div>
+    </div>
+
+    <!-- Viewer card -->
     <section class="rounded-2xl bg-white shadow-lg border border-[#f0e7de]">
       <div class="flex items-center justify-between p-3 border-b border-[#f0e7de]">
         <span class="text-sm opacity-75" id="status">Loading…</span>
@@ -46,26 +68,71 @@
     </section>
   </main>
 
+  <!-- Scripts -->
   <script>
-    const PDF_URL = "Amrit Virk's Resume-1.pdf";
+    // --------- Configure your 3 PDFs here ----------
+    const pdfs = [
+      { label: "General", url: "Amrits_Resume_General_Engineering.pdf" },
+      { label: "Software", url: "Amrits_Resume_Software_Resume.pdf" },
+      { label: "Hardware",  url: "Amrits_Resume_Hardware_Resume.pdf" } // example with spaces
+    ];
+    // ----------------------------------------------
+
     const viewer = document.getElementById('viewer');
     const statusEl = document.getElementById('status');
     const downloadLink = document.getElementById('downloadLink');
     const openTab = document.getElementById('openTab');
+    const buttons = Array.from(document.querySelectorAll('.doc-btn'));
 
-    function setPDF(src) {
-      viewer.src = src;
-      const name = src.split('/').pop() || 'document.pdf';
-      statusEl.textContent = name;
-      downloadLink.href = src;
-      downloadLink.download = name;
-      openTab.href = src;
+    function cacheBust(url) {
+      // Keep original filename for download while bypassing cache in iframe/open
+      const sep = url.includes('?') ? '&' : '?';
+      return `${url}${sep}v=${Date.now()}`;
     }
 
-    setPDF(PDF_URL);
+    function setActiveButton(activeIdx) {
+      buttons.forEach((btn, i) => {
+        const isActive = i === activeIdx;
+        btn.classList.toggle('bg-[#010001]', isActive);
+        btn.classList.toggle('text-white', isActive);
+        btn.classList.toggle('hover:bg-[#f8efe6]', !isActive);
+        btn.classList.toggle('text-[#4b3a32]', !isActive);
+      });
+    }
+
+    function setPDFByIndex(idx) {
+      const { url, label } = pdfs[idx];
+      const fileName = url.split('/').pop();
+
+      // Update links (no cache-bust so downloads preserve filename)
+      downloadLink.href = url;
+      downloadLink.download = fileName;
+      openTab.href = url;
+
+      // Update iframe (cache-busted for instant swap)
+      viewer.src = cacheBust(url);
+
+      // Status text
+      statusEl.textContent = `${label} — ${fileName}`;
+
+      // Active button visuals
+      setActiveButton(idx);
+    }
+
+    // Button listeners
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idx = Number(btn.dataset.doc);
+        setPDFByIndex(idx);
+      });
+    });
+
+    // Initial load = first (Software)
+    setPDFByIndex(0);
   </script>
 
-    <script>
+  <script>
+    // Navbar shadow on scroll
     (() => {
       const navbarHeader = document.getElementById('navbar-header');
       window.addEventListener('scroll', () => {
@@ -76,7 +143,7 @@
         }
       });
     })();
-    </script>
-  
+  </script>
+
 </body>
 </html>
